@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x0100fb1027dc96a44bf280f6cb823a8da5ae"
+               Name="FAQ"
+               Group="SE"
+               Description="FAQ Content Type"
+               Inherits="TRUE"
+               Version="0">
+    <FieldRefs>
+      <FieldRef Name="LinkTitle" ID="{82642ec8-ef9b-478f-acf9-31f7d45fbc31}" DisplayName="Question" Sealed="TRUE"/>
+      <FieldRef Name="LinkTitleNoMenu" ID="{bc91a437-52e7-49e1-8c4e-4698904b2b6d}" DisplayName="Question" Sealed="TRUE"/>
+      <FieldRef Name="Title" ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" DisplayName="Question" Sealed="TRUE"/>
+      <FieldRef ID="{b0747420-54bc-41b2-a1b3-8432f2dbdc70}" Name="Answer"/>
+    </FieldRefs>
+  </ContentType>
+
+
+  <Field Type="Note" DisplayName="Answer" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" NumLines="6" RichText="TRUE" Sortable="FALSE" ID="{b0747420-54bc-41b2-a1b3-8432f2dbdc70}" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Answer" Name="Answer"  />
+  
+</Elements>
+
