@@ -12,6 +12,14 @@ The list of components:
 
 ### FAQ custom List
 
+It is demonstrated how to customize List View in order to display list items using collapsible content panels  
+
+**Result**
+
+![alt tag](http://vgrem.files.wordpress.com/2012/12/qandaccordionview.png?w=600)
+
+For a more details follow [this post](http://blog.vgrem.com/2012/12/09/customize-the-rendering-of-a-view-in-list-view-in-sharepoint-2010-displaying-list-items-arranged-in-accordion/)
+
 ### Nintex Workflow deployment
 
 SharePoint 2010 project that demonstrates how to programatically deploy Nintex Workflow 2010 artifacts (workflow templates, context data)
