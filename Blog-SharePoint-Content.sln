@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPMedia", "SPMedia\SPMedia.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SP.Maps", "SP.Maps\SP.Maps.csproj", "{FCF4EBE3-0C0D-4EF2-AD16-590E7048F8AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharePointGMapsGeolocation", "SPGMapsGeolocation\SharePointGMapsGeolocation.csproj", "{F4829B43-E17A-40E3-953D-16113262966E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,12 @@ Global
 		{FCF4EBE3-0C0D-4EF2-AD16-590E7048F8AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCF4EBE3-0C0D-4EF2-AD16-590E7048F8AD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FCF4EBE3-0C0D-4EF2-AD16-590E7048F8AD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F4829B43-E17A-40E3-953D-16113262966E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4829B43-E17A-40E3-953D-16113262966E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4829B43-E17A-40E3-953D-16113262966E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F4829B43-E17A-40E3-953D-16113262966E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4829B43-E17A-40E3-953D-16113262966E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4829B43-E17A-40E3-953D-16113262966E}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

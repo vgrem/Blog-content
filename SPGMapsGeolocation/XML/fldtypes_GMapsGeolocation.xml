@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FieldTypes>
+  <FieldType>
+    <Field Name="TypeName">GMapFieldGeolocation</Field>
+    <Field Name="ParentType">Geolocation</Field>
+    <Field Name="TypeDisplayName">GMaps Geolocation</Field>
+    <Field Name="TypeShortDescription">Google Maps Geolocation Column</Field>
+    <Field Name="UserCreatable">TRUE</Field>
+    <Field Name="ShowOnListCreate">TRUE</Field>
+    <Field Name="ShowOnSurveyCreate">TRUE</Field>
+    <Field Name="ShowOnDocumentLibraryCreate">TRUE</Field>
+    <Field Name="ShowOnColumnTemplateCreate">TRUE</Field>
+    <Field Name="FieldTypeClass">SharePointGMapsGeolocation.GMapFieldGeolocation,$SharePoint.Project.AssemblyFullName$</Field>
+    <Field Name="SQLType">nvarchar</Field>
+  </FieldType>
+</FieldTypes>
