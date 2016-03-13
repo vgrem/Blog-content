@@ -29,7 +29,16 @@ SharePoint 2010 project that demonstrates how to programatically deploy Nintex W
 
 ### Media extension components for SharePoint 2010
 
-Video Links List for embedding and sharing YouTube and similar Video hosting content
+The solution allows to embed video hosted on YouTube into SharePoint. The same approach may be applied for embedding video from another video hosting sites, for example from Vimeo.
+
+![alt tag](http://vgrem.files.wordpress.com/2012/10/video-links-view.png?w=640&h=319)
+
+
+The following series of posts expains this solution:
+
+-   [Embedding and Sharing Video in SharePoint](http://blog.vgrem.com/2012/10/28/embedding-and-sharing-video-in-sharepoint/)
+-   [Embedding and Sharing Video in SharePoint. Part Two: Posting embedded code, support for different Video Providers, Preview view](http://blog.vgrem.com/2012/11/23/embedding-and-sharing-video-in-sharepoint-part-two-posting-embedded-code-support-for-different-video-providers-preview-view/)
+-   [Embedding Video to a SharePoint Library](http://blog.vgrem.com/2013/09/26/embedding-video-to-a-sharepoint-library/)
 
 ### Geolocation for SharePoint 2010
 
