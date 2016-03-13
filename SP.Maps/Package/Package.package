@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="e0fa3bb9-f9a3-40b2-b453-0e7d00753897" solutionId="e0fa3bb9-f9a3-40b2-b453-0e7d00753897" resetWebServer="false" sharePointProductVersion="15.0" name="Geolocation" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="3b05f312-a969-4750-9d24-46e21d5050f3" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="4498541d-d7a9-4558-93e5-1332a16f2f4e" />
+    <projectItemReference itemId="626a3d96-5aed-40b8-8363-60d892ef7a5f" />
+    <projectItemReference itemId="03b39622-45b0-4901-b36b-5ba1a175b763" />
+    <projectItemReference itemId="9d70f9fb-c7f7-4ba6-9846-575f4ec62a6e" />
+    <projectItemReference itemId="b2a8ee2f-ad8f-4355-910c-322888110c1b" />
+    <projectItemReference itemId="0c58a631-6bbb-48e0-9c3a-5d3b3bb39045" />
+  </projectItems>
+</package>

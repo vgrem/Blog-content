@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FieldTypes>
+  <!--FieldType>
+    <Field Name="TypeName">Geolocation</Field>
+    <Field Name="ParentType"></Field>
+    <Field Name="InternalType">Geolocation</Field>
+    <Field Name="SQLType">nvarchar</Field>
+    <Field Name="Sortable">FALSE</Field>
+    <Field Name="Filterable">FALSE</Field>
+    <Field Name="TypeDisplayName">Geolocation</Field>
+    <Field Name="TypeShortDescription">Geolocation</Field>
+    <Field Name="UserCreatable">TRUE</Field>
+    <Field Name="FieldTypeClass">SP.Maps.SPFieldGeolocation,SP.Maps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=080ed743b40e19a0</Field>
+    <RenderPattern Name="HeaderPattern"></RenderPattern>
+    <RenderPattern Name="DisplayPattern"></RenderPattern>
+    <RenderPattern Name="EditPattern"></RenderPattern>
+    <RenderPattern Name="NewPattern" DisplayName="NewPattern"></RenderPattern>
+    <RenderPattern Name="PreviewDisplayPattern"></RenderPattern>
+    <RenderPattern Name="PreviewEditPattern"></RenderPattern>
+    <RenderPattern Name="PreviewNewPattern"></RenderPattern>
+  </FieldType-->
+  <FieldType>
+    <Field Name="TypeName">Geolocation</Field>
+    <Field Name="TypeDisplayName">Geolocation</Field>
+    <Field Name="InternalType">Geolocation</Field>
+    <!--<Field Name="SQLType">nvarchar</Field>-->
+    <Field Name="ParentType">Text</Field>
+    <Field Name="UserCreatable">TRUE</Field>
+    <Field Name="Sortable">FALSE</Field>
+    <Field Name="Filterable">FALSE</Field>
+    <Field Name="FieldTypeClass">SP.Maps.SPFieldGeolocation,SP.Maps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=080ed743b40e19a0</Field>
+    <RenderPattern Name="HeaderPattern">
+      <HTML></HTML>
+    </RenderPattern>
+    <RenderPattern Name="DisplayPattern">
+      <WorkflowStatus />
+    </RenderPattern>
+    <RenderPattern Name="EditPattern"></RenderPattern>
+    <RenderPattern Name="NewPattern"></RenderPattern>
+    <RenderPattern Name="PreviewDisplayPattern">
+      <HTML></HTML>
+    </RenderPattern>
+    <RenderPattern Name="PreviewEditPattern">
+      <HTML></HTML>
+    </RenderPattern>
+    <RenderPattern Name="PreviewNewPattern">
+      <HTML></HTML>
+    </RenderPattern>
+  </FieldType>
+</FieldTypes>

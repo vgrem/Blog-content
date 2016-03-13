@@ -1,0 +1,38 @@
+﻿a.map-selected {
+  background-color:#1F75CC;
+  color:white;
+  z-index:100;
+}
+
+.map-popup {
+  background-color:#F6F8FD;
+  border:1px solid #29AAE2;
+  cursor:default;
+  display:none;
+  margin-top: 15px;
+  position:absolute;
+  text-align:left;
+  width:280px;
+  height: 280px;
+  z-index:50;
+  padding: 20px 20px 15px;
+}
+
+
+.map-popup p, .map-popup.div {
+  border-bottom: 1px solid #cccccc;
+  margin: 8px 0;
+  padding-bottom: 8px;
+}
+
+.map-closeButton {
+width: 16px;
+height: 16px;
+position: relative;
+overflow: hidden;
+float: right;
+/*margin: 6px 6px 0px;*/
+right: -20px;
+top: -20px;
+border: 5px solid transparent;
+}
