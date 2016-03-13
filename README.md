@@ -7,6 +7,7 @@ The list of components:
 -   Nintex Workflow deployment for SharePoint 2010
 -   Media extension components for SharePoint 2010
 -   Geolocation for SharePoint 2010
+-   SharePoint 2013 Geolocation custom field that renders Google Maps
 
 ### FAQ custom List
 
@@ -28,3 +29,5 @@ The aim of this project is to bring location and map functionality into SharePoi
 **Instalation**
 
 Activate site level scope feature: Geolocation
+
+### SharePoint 2013 Geolocation custom field that renders Google Maps
