@@ -1,1 +1,1 @@
- FAQ List with Accordion View
+### SharePoint content for [vgrem.blog.com](http://blog.vgrem.com/) blog
