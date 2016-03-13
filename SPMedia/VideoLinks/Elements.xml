@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Video Links"
+                OnQuickLaunch="TRUE"
+                TemplateType="10488"
+                FeatureId="7e6f77e5-6d9f-4ae7-a609-ec309537e261"
+                Url="Lists/VideoLinks"
+                Description="List for embedding and sharing YouTube and similar Video hosting links">
+  </ListInstance>
+</Elements>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Link (0x0105) -->
+  <ContentType ID="0x010501"
+               Name="Video Link"
+               Group="$Resources:List_Content_Types"
+               Description="Video Link Content Type"
+               Inherits="TRUE"
+               Version="0">
+    <FieldRefs>
+      <FieldRef ID="{594e551f-180d-47ec-90e5-9195225c5932}" Name="FrameBorder" Required="FALSE" />
+      <FieldRef ID="{a1e94df1-eb6e-4fd2-aef7-bf0cc175c760}" Name="VideoHeight" Required="FALSE" />
+      <FieldRef ID="{e0406eee-7432-47d8-9080-8c1c4db23170}" Name="VideoWidth" Required="FALSE" />
+      <FieldRef ID="{b6ba6c8f-81d6-478a-a303-3b18687ec934}" Name="AllowFullScreen" Required="FALSE" />
+      <FieldRef ID="{5836ef4c-c440-4cb8-a471-0ee918bfc710}" Name="EmbeddingMode" Required="FALSE" />
+      <FieldRef ID="{C1D8C50A-2146-41f6-80CC-02C7691392A3}" Name="EmbeddedVideoOnForm" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

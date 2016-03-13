@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="fb8bea2c-d702-404a-a378-ccdcabc6c312" solutionId="fb8bea2c-d702-404a-a378-ccdcabc6c312" resetWebServer="false" sharePointProductVersion="15.0" name="SharePoint.Media.VideoLinks" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="84bc3026-eed9-428b-a517-319df7907be1" />
+    <featureReference itemId="de052265-6642-41b5-bf66-74d1472bffc3" />
+    <featureReference itemId="448c0b4f-4a34-45d6-b320-54af1d8855f3" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="d6bba0a1-4cbf-4b71-b546-411112478d77" />
+    <projectItemReference itemId="99102e96-00f2-4b7a-ab4e-c67eafc3566b" />
+    <projectItemReference itemId="75de9f20-a2a0-4842-97e8-e5209bfb8087" />
+    <projectItemReference itemId="519d515e-654d-44b0-8937-b5d518a236eb" />
+    <projectItemReference itemId="65f131cd-5a48-4b17-a5bb-6dc15513d240" />
+  </projectItems>
+</package>

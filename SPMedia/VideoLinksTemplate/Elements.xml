@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <!-- Do not change the value of the Name attribute below. If it does not match the folder name of the List Definition project item, an error will occur when the project is run. -->
+    <ListTemplate
+        Name="VideoLinksTemplate"
+        Type="10488"
+        BaseType="0"
+        OnQuickLaunch="TRUE"
+        SecurityBits="11"
+        Sequence="310"
+        DisplayName="Video Links"
+        Description="List for embedding and sharing YouTube and similar Video hosting links"
+        Image="/_layouts/images/itlink.png"/>
+</Elements>

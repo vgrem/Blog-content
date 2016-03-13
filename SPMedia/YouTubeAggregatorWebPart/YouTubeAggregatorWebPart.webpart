@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="Microsoft.SharePoint.Portal.WebControls.RSSAggregatorWebPart, Microsoft.SharePoint.Portal, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+      <importErrorMessage>Cannot import this web part.</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="InitialAsyncDataFetch" type="bool">False</property>
+        <property name="ChromeType" type="chrometype">Default</property>
+        <property name="Title" type="string">YouTube Viewer</property>
+        <property name="Height" type="string" />
+        <property name="CacheXslStorage" type="bool">True</property>
+        <property name="ListDisplayName" type="string" null="true" />
+        <property name="AllowZoneChange" type="bool">True</property>
+        <property name="AutoRefresh" type="bool">False</property>
+        <property name="XmlDefinitionLink" type="string" />
+        <property name="DataFields" type="string" />
+        <property name="ListName" type="string" />
+        <property name="NoDefaultStyle" type="string" />
+        <property name="ExpandFeed" type="bool">False</property>
+        <property name="ViewFlag" type="string">0</property>
+        <property name="Direction" type="direction">NotSet</property>
+        <property name="AutoRefreshInterval" type="int">60</property>
+        <property name="AllowConnect" type="bool">True</property>
+        <property name="Description" type="string">Displays an YouTube Video feed</property>
+        <property name="AllowClose" type="bool">True</property>
+        <property name="ShowWithSampleData" type="bool">False</property>
+        <property name="ParameterBindings" type="string">
+
+          &lt;ParameterBinding Name="RequestUrl" Location="WPProperty[FeedUrl]"/&gt;
+        </property>
+        <property name="CacheXslTimeOut" type="int">600</property>
+        <property name="SampleData" type="string" null="true" />
+        <property name="ListUrl" type="string" null="true" />
+        <property name="DataSourceID" type="string" />
+        <property name="FireInitialRow" type="bool">True</property>
+        <property name="ManualRefresh" type="bool">False</property>
+        <property name="FeedUrl" type="string">http://gdata.youtube.com/feeds/api/users/Nintex/uploads</property>
+        <property name="ChromeState" type="chromestate">Normal</property>
+        <property name="AllowHide" type="bool">True</property>
+        <property name="PageSize" type="int">-1</property>
+        <property name="FeedLimit" type="int">30</property>
+        <property name="AllowEdit" type="bool">True</property>
+        <property name="AsyncRefresh" type="bool">False</property>
+        <property name="HelpMode" type="helpmode">Modeless</property>
+        <property name="ListId" type="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">00000000-0000-0000-0000-000000000000</property>
+        <property name="XslLink" type="string">/_layouts/XSL/YouTubeVideoFeed.xsl</property>
+        <property name="UseSQLDataSourcePaging" type="bool">True</property>
+        <property name="ViewFlags" type="Microsoft.SharePoint.SPViewFlags, Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">None</property>
+        <property name="AllowMinimize" type="bool">True</property>
+        <property name="TitleUrl" type="string" />
+        <property name="CatalogIconImageUrl" type="string" />
+        <property name="DataSourcesString" type="string">
+          &lt;%@ Register TagPrefix="sharepoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %&gt;&lt;%@ Register TagPrefix="webpartpages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %&gt;&lt;sharepoint:XmlUrlDataSource runat="server" HttpMethod="GET" SelectCommand="" AuthType="None" XPath=""&gt;&lt;DataFileParameters&gt;
+          &lt;webpartpages:DataFormParameter ParameterKey="RequestUrl" PropertyName="ParameterValues" Name="RequestUrl"&gt;&lt;/webpartpages:DataFormParameter&gt;
+          &lt;/DataFileParameters&gt;
+          &lt;/sharepoint:XmlUrlDataSource&gt;
+        </property>
+        <property name="Hidden" type="bool">False</property>
+        <property name="DisplayName" type="string" />
+        <property name="PageType" type="Microsoft.SharePoint.PAGETYPE, Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">PAGE_NORMALVIEW</property>
+        <property name="Width" type="string" />
+        <property name="ExportMode" type="exportmode">All</property>
+        <property name="CacheRefreshTimeInMins" type="int">120</property>
+        <property name="ViewContentTypeId" type="string" />
+        <property name="HelpUrl" type="string" />
+        <property name="XmlDefinition" type="string" />
+        <property name="Default" type="string" />
+        <property name="TitleIconImageUrl" type="string" />
+        <property name="MissingAssembly" type="string">Cannot import this web part.</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

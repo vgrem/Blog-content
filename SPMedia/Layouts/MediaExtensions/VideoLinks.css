@@ -1,0 +1,46 @@
+﻿.videolink-embed li {
+    float:left; 
+    padding: 8px;
+}
+
+.videolinks-embed-props {
+    
+}
+
+.context-data-item {
+    padding-left: 8px;
+    padding-right: 8px; 
+}
+
+.channels-browse-content-grid {
+    display: block;
+    list-style: none;
+}
+
+.channels-content-item {
+    float: left;
+}
+.content-item-detail {
+    color: #555;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal;
+    font-size: 11px;
+    height: 26px;
+}
+
+a.content-item-title 
+{
+    display: block;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+.video-time, .video-actions {
+   right: 2px;
+   bottom: 2px;
+   position: absolute;
+}

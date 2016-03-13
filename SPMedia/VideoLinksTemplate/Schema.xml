@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="Video Links"  EnableContentTypes="TRUE"  Direction="$Resources:core,Direction;" OrderedList="TRUE" Url="Lists/VideoLinks" BaseType="0" DisableAttachments="TRUE" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      <ContentTypeRef ID="0x010501">
+        <Folder TargetName="VideoLink" />
+      </ContentTypeRef>
+      <ContentTypeRef ID="0x010503">
+        <Folder TargetName="EmbedCode" />
+      </ContentTypeRef>
+      <!--<ContentTypeRef ID="0x0120" />-->
+    </ContentTypes>
+    <Fields>
+      <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" ReadOnly="TRUE" Required="FALSE" Hidden="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title"></Field>
+      <Field ID="{82642ec8-ef9b-478f-acf9-31f7d45fbc31}" Name="LinkTitle" Hidden="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="LinkTitle"></Field>
+      <Field ID="{bc91a437-52e7-49e1-8c4e-4698904b2b6d}" Name="LinkTitleNoMenu" Hidden="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="LinkTitleNoMenu"></Field>
+      <Field ID="{081c6e4c-5c14-4f20-b23e-1a71ceb6a67c}" Name="DocIcon" DisplaceOnUpgrade="TRUE" DisplayName="$Resources:core,Type;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="DocIcon"></Field>
+      <Field ID="{503f1caa-358e-4918-9094-4a2cdc4bc034}" Name="Edit" DisplayName="$Resources:core,Edit;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Edit"></Field>
+      <Field ID="{c29e077d-f466-4d8e-8bbe-72b66c5f205c}" Type="URL" Name="URL" DisplayName="$Resources:core,URL;" Required="TRUE" FromBaseType="TRUE" ShowInViewForms="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="URL"></Field>
+      <Field ID="{9da97a8a-1da5-4a77-98d3-4bc10456e700}" Type="Note" Name="Comments" DisplayName="$Resources:core,Notes;" Sortable="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Comments"></Field>
+      <Field ID="{2a9ab6d3-268a-4c1c-9897-e5f018f87e64}" ReadOnly="TRUE" Filterable="FALSE" Type="Computed" Name="URLwMenu" DisplayName="$Resources:core,URL;" DisplayNameSrcField="URL" ClassInfo="Menu" AuthoringInfo="$Resources:core,URLwEditMenu;" ListItemMenuAllowed="Required" LinkToItemAllowed="Prohibited" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="URLwMenu">
+        <FieldRefs>
+          <FieldRef Name="URL" />
+          <FieldRef Name="FileLeafRef" />
+          <FieldRef Name="FileRef" />
+          <FieldRef Name="FSObjType" />
+          <FieldRef Name="_EditMenuTableStart2" />
+          <FieldRef Name="_EditMenuTableEnd" />
+        </FieldRefs>
+      </Field>
+      <Field ID="{7A7F3660-D408-4734-9AA0-2D86E33D79AB}" ReadOnly="TRUE" Filterable="FALSE" Type="Computed" Name="URLwMenu2" DisplayName="$Resources:core,URL;" DisplayNameSrcField="URL" ClassInfo="Menu" AuthoringInfo="$Resources:core,URLwEditMenu; (old)" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="URLwMenu2">
+        <FieldRefs>
+          <FieldRef Name="URL" />
+          <FieldRef Name="FileLeafRef" />
+          <FieldRef Name="FileRef" />
+          <FieldRef Name="FSObjType" />
+          <FieldRef Name="_EditMenuTableStart" />
+          <FieldRef Name="_EditMenuTableEnd" />
+        </FieldRefs>
+      </Field>
+      <Field ID="{aeaf07ee-d2fb-448b-a7a3-cf7e062d6c2a}" DisplaceOnUpgrade="TRUE" ReadOnly="TRUE" Filterable="FALSE" Type="Computed" Name="URLNoMenu" DisplayName="$Resources:core,URL;" DisplayNameSrcField="URL" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="URLNoMenu">
+        <FieldRefs>
+          <FieldRef Name="URL" />
+          <FieldRef Name="FileLeafRef" />
+          <FieldRef Name="FileRef" />
+          <FieldRef Name="FSObjType" />
+        </FieldRefs>
+      </Field>
+      <Field Type="Number"
+         DisplayName="Frame Border"
+         Required="FALSE"
+         EnforceUniqueValues="FALSE"
+         Group="Media Columns"
+         ID="{594e551f-180d-47ec-90e5-9195225c5932}"
+         StaticName="FrameBorder"
+         Name="FrameBorder"
+         Percentage="FALSE"
+         Hidden="FALSE"
+         SourceID="http://schemas.microsoft.com/sharepoint/v3">
+        <Default>0</Default>
+      </Field>
+
+      <Field Type="Number"
+             DisplayName="Video Height"
+             Required="FALSE"
+             EnforceUniqueValues="FALSE"
+             Group="Media Columns"
+             ID="{a1e94df1-eb6e-4fd2-aef7-bf0cc175c760}"
+             StaticName="VideoHeight"
+             Name="VideoHeight"
+             Percentage="FALSE"
+             Hidden="FALSE"
+             SourceID="http://schemas.microsoft.com/sharepoint/v3"/>
+      <Field Type="Number"
+             DisplayName="Video Width"
+             Required="FALSE"
+             EnforceUniqueValues="FALSE"
+             Group="Media Columns"
+             ID="{e0406eee-7432-47d8-9080-8c1c4db23170}"
+             StaticName="VideoWidth"
+             Name="VideoWidth"
+             Percentage="FALSE"
+             Hidden="FALSE"
+             SourceID="http://schemas.microsoft.com/sharepoint/v3"/>
+      <Field Type="Boolean"
+             DisplayName="Allow FullScreen"
+             EnforceUniqueValues="FALSE"
+             Group="Media Columns"
+             ID="{b6ba6c8f-81d6-478a-a303-3b18687ec934}"
+             StaticName="AllowFullScreen"
+             Name="AllowFullScreen"
+             Required="FALSE"
+             Hidden="FALSE"
+             SourceID="http://schemas.microsoft.com/sharepoint/v3">
+        <Default>0</Default>
+      </Field>
+      <Field Type="Choice"
+             DisplayName="Embedding Mode"
+             Required="FALSE"
+             EnforceUniqueValues="FALSE"
+             Format="Dropdown"
+             FillInChoice="FALSE"
+             Group="Media Columns"
+             ID="{5836ef4c-c440-4cb8-a471-0ee918bfc710}"
+             StaticName="EmbeddingMode"
+             Name="EmbeddingMode"
+             Hidden="FALSE"
+             SourceID="http://schemas.microsoft.com/sharepoint/v3">
+        <Default>IFrame</Default>
+        <CHOICES>
+          <CHOICE>IFrame</CHOICE>
+          <CHOICE>Object(YouTube)</CHOICE>
+          <CHOICE>Object(Qik)</CHOICE>
+          <CHOICE>Object(CollegeHumor)</CHOICE>
+          <CHOICE>Object(Jest)</CHOICE>
+        </CHOICES>
+      </Field>
+      <Field ID="{9F79BBE2-19A3-4341-96F6-BFDC024DEAB3}"
+      Name="EmbedCode"
+      SourceID="http://schemas.microsoft.com/sharepoint/v3"
+      StaticName="EmbedCode"
+      Group="Media Columns"
+      Type="Note"
+      DisplayName="Embed Code"
+      Hidden="FALSE"
+      Sortable="FALSE">
+        <DisplayPattern>
+          <HTML><![CDATA[<div>"]]></HTML>
+          <Column HTMLEncode='TRUE' Name='EmbedCode'></Column>
+          <HTML><![CDATA[</div>]]></HTML>
+        </DisplayPattern>
+      </Field>
+      <Field
+                 ID="{C1D8C50A-2146-41f6-80CC-02C7691392A3}"
+                 Type="Computed"
+                 Name="EmbeddedVideoOnForm"
+                 StaticName="EmbeddedVideoOnForm"
+                 DisplaceOnUpgrade="TRUE"
+                 ShowInNewForm="FALSE"
+                 ShowInDisplayForm="FALSE"
+                 ShowInEditForm="FALSE"
+                 ShowInFileDlg="FALSE"
+                 DisplayName="Embedded Video"
+                 SourceID="http://schemas.microsoft.com/sharepoint/v3/fields"
+                 Sealed="TRUE"
+                 Sortable="FALSE"
+                 Filterable="FALSE">
+        <FieldRefs>
+          <FieldRef Name="URL" />
+          <FieldRef Name="FileLeafRef" />
+          <FieldRef Name="FileRef" />
+          <FieldRef Name="FSObjType" />
+          <FieldRef Name="EmbeddingMode" />
+          <FieldRef Name="VideoWidth" />
+          <FieldRef Name="VideoHeight" />
+          <FieldRef Name="FrameBorder" />
+          <FieldRef Name="EmbedCode" />
+        </FieldRefs>
+        <DisplayPattern>
+          <!--<IfEqual>
+            <Expr1>
+              <Column Name="EmbeddingMode" />
+            </Expr1>
+            <Expr2>IFrame</Expr2>
+            <Then>
+              <HTML><![CDATA[<iframe width=']]></HTML>
+              <Field Name="VideoWidth"/>
+              <HTML><![CDATA[' height=']]></HTML>
+              <Field Name="VideoHeight"/>
+              <HTML><![CDATA[' src=']]></HTML>
+              <Field Name="URL"/>
+              <HTML><![CDATA[' frameborder=']]></HTML>
+              <Field Name="FrameBorder"/>
+              <HTML><![CDATA[' allowfullscreen']]></HTML>
+              <HTML>
+                <![CDATA['></iframe>]]>
+              </HTML>
+            </Then>
+            <Else>
+              <HTML>
+                <![CDATA[Not supported yet]]>
+              </HTML>
+            </Else>
+          </IfEqual>-->
+        </DisplayPattern>
+      </Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" OrderedView="TRUE" TabularView="FALSE" MobileView="TRUE">
+        <Toolbar Type="Standard" />
+        <XslLink>main.xsl</XslLink>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Order" Ascending="TRUE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ViewFields>
+          <FieldRef Name="URL" Explicit="TRUE"></FieldRef>
+          <FieldRef Name="URLNoMenu"></FieldRef>
+        </ViewFields>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,nofavlinks_toaddlinkclickaddnewlink)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,nofavlinks_toaddlinkclickaddnewlink_howto)" />
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,AddNewLink)" />
+          <ParameterBinding Name="MoreAnnouncements" Location="Resource(wss,morelinks_ellipses)" />
+        </ParameterBindings>
+        <RowLimit>20</RowLimit>
+      </View>
+      <View BaseViewID="1" Type="HTML" OrderedView="TRUE" WebPartZoneID="Main" DisplayName="$Resources:core,All_Links;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/images/links.png" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="DocIcon"></FieldRef>
+          <FieldRef Name="Edit"></FieldRef>
+          <FieldRef Name="EmbeddedVideoOnForm"></FieldRef>
+          <FieldRef Name="VideoWidth"></FieldRef>
+          <FieldRef Name="VideoHeight"></FieldRef>
+          <FieldRef Name="EmbeddingMode"></FieldRef>
+          <FieldRef Name="Comments"></FieldRef>
+        </ViewFields>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Order" Ascending="TRUE"></FieldRef>
+          </OrderBy>
+        </Query>
+      </View>
+      <View  MobileView="TRUE" Type="HTML" DisplayName="Preview" WebPartZoneID="Main" Url="Preview.aspx" BaseViewID="40" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/images/links.png">
+        <ViewFields>
+          <FieldRef Name="DocIcon" />
+          <FieldRef Name="Edit" />
+          <FieldRef Name="EmbeddedVideoOnForm" />
+          <FieldRef Name="VideoWidth" />
+          <FieldRef Name="VideoHeight" />
+          <FieldRef Name="EmbeddingMode" />
+          <FieldRef Name="Comments" />
+        </ViewFields>
+        <!--<Aggregations Value="Off" />-->
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <!--<Mobile MobileItemLimit="3" MobileSimpleViewField="VideoWidth" />-->
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">VideoLinks.xsl</XslLink>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Order" Ascending="TRUE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+      <View  MobileView="TRUE" Type="HTML" DisplayName="Embedded" WebPartZoneID="Main" Url="Embedded.aspx" BaseViewID="41" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/images/links.png">
+        <ViewFields>
+          <FieldRef Name="DocIcon" />
+          <FieldRef Name="Edit" />
+          <FieldRef Name="EmbedCode" />
+          <FieldRef Name="Comments" />
+        </ViewFields>
+        <!--<Aggregations Value="Off" />-->
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <!--<Mobile MobileItemLimit="3" MobileSimpleViewField="VideoWidth" />-->
+        <Toolbar Type="Standard" />
+        <XslLink>main.xsl</XslLink>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Order" Ascending="TRUE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="3" Type="HTML" TabularView="FALSE" OrderedView="TRUE">
+        <Toolbar Type="Standard" />
+        <XslLink>main.xsl</XslLink>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Order" Ascending="TRUE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ViewFields>
+          <FieldRef Name="URL"></FieldRef>
+        </ViewFields>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+        <RowLimit>12</RowLimit>
+      </View>
+      <View BaseViewID="4" Type="HTML" TabularView="FALSE" OrderedView="TRUE" FreeForm="TRUE">
+        <Toolbar Type="Standard" />
+        <XslLink>blog.xsl</XslLink>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Order" Ascending="TRUE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ViewFields>
+          <FieldRef Name="URL"></FieldRef>
+        </ViewFields>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+        <RowLimit>30</RowLimit>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+    <DefaultDescription>
+            $Resources:core,linksList_Usage;
+        </DefaultDescription>
+  </MetaData>
+</List>

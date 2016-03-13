@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Link (0x0105) -->
+  <ContentType ID="0x010503"
+               Name="Embed Code"
+               Group="$Resources:List_Content_Types"
+               Description="Embed Code Content Type"
+               Inherits="FALSE"
+               Version="0">
+    <FieldRefs>
+      <FieldRef ID="{c29e077d-f466-4d8e-8bbe-72b66c5f205c}" Name="URL" Required="FALSE" Hidden="TRUE"/>
+      <FieldRef ID="{9F79BBE2-19A3-4341-96F6-BFDC024DEAB3}" Name="EmbedCode" Required="TRUE" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

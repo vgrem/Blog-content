@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Field Type="Number" 
+         DisplayName="Frame Border" 
+         Required="FALSE" 
+         EnforceUniqueValues="FALSE"  
+         Group="Media Columns" 
+         ID="{594e551f-180d-47ec-90e5-9195225c5932}"  
+         StaticName="FrameBorder" 
+         Name="FrameBorder" 
+         Percentage="FALSE" 
+         Hidden="FALSE" 
+         SourceID="http://schemas.microsoft.com/sharepoint/v3">
+    <Default>0</Default>
+  </Field>
+
+  <Field Type="Number" 
+         DisplayName="Video Height" 
+         Required="FALSE" 
+         EnforceUniqueValues="FALSE" 
+         Group="Media Columns" 
+         ID="{a1e94df1-eb6e-4fd2-aef7-bf0cc175c760}"  
+         StaticName="VideoHeight" 
+         Name="VideoHeight" 
+         Percentage="FALSE" 
+         Hidden="FALSE" 
+         SourceID="http://schemas.microsoft.com/sharepoint/v3"/>
+
+
+  <Field Type="Number" 
+         DisplayName="Video Width" 
+         Required="FALSE" 
+         EnforceUniqueValues="FALSE" 
+         Group="Media Columns" 
+         ID="{e0406eee-7432-47d8-9080-8c1c4db23170}" 
+         StaticName="VideoWidth" 
+         Name="VideoWidth" 
+         Percentage="FALSE" 
+         Hidden="FALSE" 
+         SourceID="http://schemas.microsoft.com/sharepoint/v3"/>
+
+  <Field Type="Boolean" 
+         DisplayName="Allow FullScreen" 
+         EnforceUniqueValues="FALSE" 
+         Group="Media Columns" 
+         ID="{b6ba6c8f-81d6-478a-a303-3b18687ec934}" 
+         StaticName="AllowFullScreen" 
+         Name="AllowFullScreen" 
+         Required="FALSE" 
+         Hidden="FALSE"
+         SourceID="http://schemas.microsoft.com/sharepoint/v3">
+    <Default>0</Default>
+  </Field>
+
+  <Field Type="Choice" 
+         DisplayName="Embedding Mode" 
+         Required="FALSE" 
+         EnforceUniqueValues="FALSE" 
+         Format="Dropdown" 
+         FillInChoice="FALSE" 
+         Group="Media Columns" 
+         ID="{5836ef4c-c440-4cb8-a471-0ee918bfc710}" 
+         StaticName="EmbeddingMode" 
+         Name="EmbeddingMode" 
+         Hidden="FALSE"
+         SourceID="http://schemas.microsoft.com/sharepoint/v3">
+    <Default>IFrame</Default>
+    <CHOICES>
+      <CHOICE>IFrame</CHOICE>
+      <CHOICE>Object(YouTube)</CHOICE>
+      <CHOICE>Object(Qik)</CHOICE>
+      <CHOICE>Object(CollegeHumor)</CHOICE>
+      <CHOICE>Object(Jest)</CHOICE>
+    </CHOICES>
+  </Field>
+
+  <Field ID="{9F79BBE2-19A3-4341-96F6-BFDC024DEAB3}"
+       Name="EmbedCode"
+       SourceID="http://schemas.microsoft.com/sharepoint/v3"
+       StaticName="EmbedCode"
+       Group="Media Columns"
+       Type="Note"
+       DisplayName="Embed Code"
+       Hidden="FALSE"
+       Sortable="FALSE">
+  </Field>
+
+  <Field
+                 ID="{C1D8C50A-2146-41f6-80CC-02C7691392A3}"
+                 Type="Computed"
+                 Name="EmbeddedVideoOnForm"
+                 StaticName="EmbeddedVideoOnForm"
+                 DisplaceOnUpgrade="TRUE"
+                 ShowInNewForm="FALSE"
+                 ShowInDisplayForm="FALSE"
+                 ShowInEditForm="FALSE"
+                 ShowInFileDlg="FALSE"
+                 DisplayName="Embedded Video"
+                 SourceID="http://schemas.microsoft.com/sharepoint/v3/fields"
+                 Sealed="TRUE"
+                 Sortable="FALSE"
+                 Filterable="FALSE">
+    <FieldRefs>
+      <FieldRef Name="URL" />
+      <FieldRef Name="FileLeafRef" />
+      <FieldRef Name="FileRef" />
+      <FieldRef Name="FSObjType" />
+      <FieldRef Name="EmbeddingMode" />
+      <FieldRef Name="VideoWidth" />
+      <FieldRef Name="VideoHeight" />
+      <FieldRef Name="FrameBorder" />
+      <FieldRef Name="EmbedCode" />
+    </FieldRefs>
+    <DisplayPattern>
+      <IfEqual>
+        <Expr1>
+          <Column Name="EmbeddingMode" />
+        </Expr1>
+        <Expr2>IFrame</Expr2>
+        <Then>
+          <HTML><![CDATA[<iframe width=']]></HTML>
+          <Field Name="VideoWidth"/>
+          <HTML><![CDATA[' height=']]></HTML>
+          <Field Name="VideoHeight"/>
+          <HTML><![CDATA[' src=']]></HTML>
+          <Field Name="URL"/>
+          <HTML><![CDATA[' frameborder=']]></HTML>
+          <Field Name="FrameBorder"/>
+          <HTML><![CDATA[' allowfullscreen']]></HTML>
+          <HTML>
+            <![CDATA['></iframe>]]>
+          </HTML>
+        </Then>
+        <Else>
+          <HTML>
+            <![CDATA[Not supported yet]]>
+          </HTML>
+        </Else>
+      </IfEqual>
+    </DisplayPattern>
+  </Field>
+
+
+  
+  
+</Elements>

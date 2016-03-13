@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction Id="Ribbon.EditingTools.CPInsert.ShareVideo"
+                Location="CommandUI.Ribbon"
+                Title="Share Video"
+                Sequence="15">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition
+          Location="Ribbon.EditingTools.CPInsert.Media.Controls._children">
+              <SplitButton
+                Id="Ribbon.EditingTools.CPInsert.Media.Video"
+                Alt="$Resources:SPShareVideo,ButShareVideoAlt;"
+                Command="ShareVideo"
+                CommandMenuOpen="ShareVideoMenuOpen"
+                CommandMenuClose="ShareVideoMenuClose"
+                Image16by16="/_layouts/$Resources:core,Language;/images/formatmap16x16.png" Image16by16Top="-176" Image16by16Left="-224"
+                Image32by32="/_layouts/images/publishing.png" Image32by32Top="-64" Image32by32Left="-64"
+                LabelText="$Resources:SPShareVideo,cui_ButShareVideo;"
+                MenuAlt="$Resources:SPShareVideo,ButShareVideoMenuAlt;"
+                Sequence="10"
+                TemplateAlias="o1"
+                ToolTipTitle="$Resources:SPShareVideo,cui_ButShareVideo;"
+                ToolTipDescription="$Resources:SPShareVideo,cui_STT_ButShareVideo;">
+                <Menu Id="Ribbon.EditingTools.CPInsert.Media.Video.Menu">
+                  <MenuSection
+                    Id="Ribbon.EditingTools.CPInsert.Media.Video.Menu.Video"
+                    DisplayMode="Menu"
+                    Sequence="10">
+                    <Controls Id="Ribbon.EditingTools.CPInsert.Media.Video.Menu.Video.Controls">
+                      <Button
+                        Id="Ribbon.EditingTools.CPInsert.Media.Video.Menu.Video.EmbedVideo"
+                        Sequence="10"
+                        Alt="$Resources:SPShareVideo,ButEmbedVideoAlt;"
+                        Command="EmbedVideo"
+                        LabelText="$Resources:SPShareVideo,ButEmbedVideo;"
+                        ToolTipTitle="$Resources:SPShareVideo,cui_STT_title_ButEmbedVideo;"
+                        ToolTipDescription="$Resources:SPShareVideo,cui_STT_ButEmbedVideo;"/>
+                      <Button
+                          Id="Ribbon.EditingTools.CPInsert.Media.Video.Menu.Video.FromAddress"
+                          Sequence="20"
+                          Alt="$Resources:SPShareVideo,ButFromAddressAlt;"
+                          Command="InsertVideoWeb"
+                          LabelText="$Resources:SPShareVideo,ButFromAddress;"
+                          ToolTipTitle="$Resources:SPShareVideo,cui_STT_title_ButInsertVideoFromAddress;"
+                          ToolTipDescription="$Resources:SPShareVideo,cui_STT_ButInsertVideoFromAddress;"/>
+                    </Controls>
+                  </MenuSection>
+                </Menu>
+              </SplitButton>
+        </CommandUIDefinition>
+        <CommandUIDefinition
+          Location="Ribbon.EditingTools.CPInsert.Scaling._children">
+          <MaxSize Id="Ribbon.EditingTools.CPInsert.Scaling.Media.Video.MaxSize" Sequence="15" GroupId="Ribbon.EditingTools.CPInsert.Media" Size="LargeMedium" />
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+  <Control
+       Id="AdditionalPageHead"
+       Sequence="120"
+       ControlClass="SPShareVideo.WebControls.ShareVideoRibbon"
+       ControlAssembly="SPShareVideo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=51bf990c945cdb24">
+  </Control>
+</Elements>

@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0BF55B64-DB58-430E-B408-4CD69E3559ED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SPShareVideo</RootNamespace>
+    <AssemblyName>SPShareVideo</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <ProjectMode>SharePointCustomization</ProjectMode>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint.ApplicationPages, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\CONFIG\BIN\Microsoft.SharePoint.ApplicationPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Publishing, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\Microsoft.SharePoint.Publishing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Security" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationPages\RteDialogPage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\SPShareVideo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SPShareVideo.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WebControls\ShareVideoRibbon.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ControlTemplates\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{519d515e-654d-44b0-8937-b5d518a236eb}</SharePointProjectItemId>
+    </None>
+    <None Include="EmbedCode\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{7a7c1709-4beb-4f65-9b8b-c27faa8fc644}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Share Video Ribbon\Share Video Ribbon.feature">
+      <FeatureId>{448c0b4f-4a34-45d6-b320-54af1d8855f3}</FeatureId>
+    </None>
+    <None Include="Features\Video Links List\Video Links List.feature">
+      <FeatureId>{de052265-6642-41b5-bf66-74d1472bffc3}</FeatureId>
+    </None>
+    <None Include="Features\Video Links\Video Links.feature">
+      <FeatureId>{84bc3026-eed9-428b-a517-319df7907be1}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{75de9f20-a2a0-4842-97e8-e5209bfb8087}</SharePointProjectItemId>
+    </None>
+    <None Include="Media Fields\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8a1c96b9-1274-4b37-9693-cf466aa34d87}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{fb8bea2c-d702-404a-a378-ccdcabc6c312}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Resources\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d6bba0a1-4cbf-4b71-b546-411112478d77}</SharePointProjectItemId>
+    </None>
+    <None Include="ShareVideoRibbon\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ca354528-3c2d-4941-8d45-109dda410b42}</SharePointProjectItemId>
+    </None>
+    <None Include="VideoLinksTemplate\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{011c4ec4-f81f-4a91-9ca2-8aeaac89a662}</SharePointProjectItemId>
+    </None>
+    <None Include="VideoLinks\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{950c249f-8b5d-48b2-ac0d-967399b24263}</SharePointProjectItemId>
+    </None>
+    <None Include="VideoLink\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b1a74f55-c2d2-426a-bd8b-1aadac15066d}</SharePointProjectItemId>
+    </None>
+    <None Include="XML\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{65f131cd-5a48-4b17-a5bb-6dc15513d240}</SharePointProjectItemId>
+    </None>
+    <None Include="XSL\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{99102e96-00f2-4b7a-ab4e-c67eafc3566b}</SharePointProjectItemId>
+    </None>
+    <None Include="YouTubeAggregatorWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{6d7ebc7d-602a-42c5-9438-a9a9b89e88bc}</SharePointProjectItemId>
+    </None>
+    <None Include="YouTubeAggregatorWebPart\YouTubeAggregatorWebPart.webpart">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EmbedCode\Elements.xml" />
+    <Content Include="Features\Share Video Ribbon\Share Video Ribbon.Template.xml">
+      <DependentUpon>Share Video Ribbon.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Video Links List\Video Links List.Template.xml">
+      <DependentUpon>Video Links List.feature</DependentUpon>
+    </Content>
+    <Content Include="Layouts\MediaExtensions\jquery.min.js" />
+    <Content Include="Layouts\MediaExtensions\YTPlayer.js" />
+    <Content Include="Layouts\MediaExtensions\RteDialog.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Layouts\MediaExtensions\ShareVideoRibbon.js" />
+    <Content Include="Layouts\MediaExtensions\VideoLinks.css" />
+    <Content Include="Layouts\MediaExtensions\VideoLinks.js" />
+    <Content Include="Media Fields\Elements.xml" />
+    <Content Include="Resources\SPShareVideo.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SPShareVideo.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="ShareVideoRibbon\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="VideoLinksTemplate\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="VideoLinksTemplate\Schema.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="VideoLinks\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XSL\YouTubeVideoFeed.xsl">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XSL\fldtypes_VideoLinks.xsl">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XSL\VideoLinks.xsl">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="YouTubeAggregatorWebPart\Elements.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\Video Links\Video Links.Template.xml">
+      <DependentUpon>Video Links.feature</DependentUpon>
+    </Content>
+    <Content Include="VideoLink\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="false" />
+</Project>
