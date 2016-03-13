@@ -8,6 +8,7 @@ The list of components:
 -   Media extension components for SharePoint 2010
 -   Geolocation for SharePoint 2010
 -   SharePoint 2013 Geolocation custom field that renders Google Maps
+-   SharePoint.Client.Navigation.PowerShell
 
 ### FAQ custom List
 
@@ -31,3 +32,7 @@ The aim of this project is to bring location and map functionality into SharePoi
 Activate site level scope feature: Geolocation
 
 ### SharePoint 2013 Geolocation custom field that renders Google Maps
+
+### SharePoint.Client.Navigation.PowerShell
+
+Project demonstrates how to manage Navigation via CSOM API in PowerShell
