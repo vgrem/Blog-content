@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog-SharePoint-Content", "Blog-SharePoint-Content.csproj", "{2ED79D5E-43FA-492A-9280-BAA511C291ED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NWDeploy", "NWDeploy\NWDeploy.csproj", "{CB6A0634-0FB5-4232-B84A-CF7065909FFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FAQ", "FAQ\FAQ.csproj", "{2ED79D5E-43FA-492A-9280-BAA511C291ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,6 +13,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CB6A0634-0FB5-4232-B84A-CF7065909FFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB6A0634-0FB5-4232-B84A-CF7065909FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB6A0634-0FB5-4232-B84A-CF7065909FFD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CB6A0634-0FB5-4232-B84A-CF7065909FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB6A0634-0FB5-4232-B84A-CF7065909FFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB6A0634-0FB5-4232-B84A-CF7065909FFD}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{2ED79D5E-43FA-492A-9280-BAA511C291ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2ED79D5E-43FA-492A-9280-BAA511C291ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2ED79D5E-43FA-492A-9280-BAA511C291ED}.Debug|Any CPU.Deploy.0 = Debug|Any CPU

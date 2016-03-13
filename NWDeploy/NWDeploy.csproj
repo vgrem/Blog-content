@@ -5,11 +5,11 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2ED79D5E-43FA-492A-9280-BAA511C291ED}</ProjectGuid>
+    <ProjectGuid>{CB6A0634-0FB5-4232-B84A-CF7065909FFD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Blog.SharePoint.Content</RootNamespace>
-    <AssemblyName>Blog.SharePoint.Content</AssemblyName>
+    <RootNamespace>SharePoint.NintexDeployment</RootNamespace>
+    <AssemblyName>SharePoint.NintexDeployment</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -64,10 +64,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Nintex.Workflow, Version=1.0.0.0, Culture=neutral, PublicKeyToken=913f6bae0ca5ae12, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Nintex\Nintex Workflow 2010\Binaries\Nintex.Workflow.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
@@ -75,28 +78,45 @@
     <Reference Include="Microsoft.SharePoint.Security" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContextDataItems\AllApproverCommentsXml.cs" />
+    <Compile Include="Diagnostics\NWLoggingService.cs" />
+    <Compile Include="Features\WorkflowContent\WorkflowContent.EventReceiver.cs">
+      <DependentUpon>WorkflowContent.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\ApplicationConfig.cs" />
+    <Compile Include="Infrastructure\ContextItemMappingEntry.cs" />
+    <Compile Include="Infrastructure\NintexTaskExtensions.cs" />
+    <Compile Include="Infrastructure\NWFAdapter.cs" />
+    <Compile Include="Infrastructure\NWFMappingEntry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\Serializer.cs" />
+    <Compile Include="Utilities\WorkflowUtilities.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="FAQ\FAQList\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{0005abc2-91e9-49e5-bb83-725fb3128162}</SharePointProjectItemId>
-    </None>
-    <None Include="FAQ\FAQ\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{c302f816-2e44-4511-9419-b1f099e28e9d}</SharePointProjectItemId>
-    </None>
-    <None Include="Features\FAQList\FAQList.feature">
-      <FeatureId>{55ca8612-b31f-4a01-b4b1-3f733e826025}</FeatureId>
+    <None Include="Features\WorkflowContent\WorkflowContent.feature">
+      <FeatureId>{c8f18c26-6701-4145-b234-7718d4b54a0e}</FeatureId>
     </None>
     <None Include="key.snk" />
+    <None Include="NWFContent\Draft_Document_Review.nwf" />
+    <None Include="NWFContent\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a02970c4-6127-4a59-adec-442a345640df}</SharePointProjectItemId>
+    </None>
+    <None Include="NWFContent\OrderApproval.nwf" />
     <None Include="Package\Package.package">
-      <PackageId>{318127c8-f6a0-45a9-a8d1-93337165490d}</PackageId>
+      <PackageId>{89198c8c-537d-4bf2-b2c8-d197a5bf41d9}</PackageId>
     </None>
     <None Include="Package\Package.Template.xml">
       <DependentUpon>Package.package</DependentUpon>
     </None>
-    <None Include="XSL\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{67fd9ca1-7e43-48f7-9b5b-1014287d92ca}</SharePointProjectItemId>
-    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\WorkflowContent\WorkflowContent.Template.xml">
+      <DependentUpon>WorkflowContent.feature</DependentUpon>
+    </Content>
+    <Content Include="NWFContent\ContextItemsMappings.xml" />
+    <Content Include="NWFContent\NWMappings.xml">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
@@ -114,15 +134,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="FAQ\FAQList\Elements.xml" />
-    <Content Include="FAQ\FAQList\Schema.xml" />
-    <Content Include="FAQ\FAQ\Elements.xml" />
-    <Content Include="Features\FAQList\FAQList.Template.xml">
-      <DependentUpon>FAQList.feature</DependentUpon>
-    </Content>
-    <Content Include="XSL\FAQ.xsl" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
