@@ -33,10 +33,11 @@ The solution allows to embed video hosted on YouTube into SharePoint. The same a
 
 **Results**
 
-Pic. Add Youtube embed code 
+Pic 1. Add Youtube embed code 
+
 ![alt tag](http://vgrem.files.wordpress.com/2012/11/createembedcode2.png)
 
-Pic. Youtube video list
+Pic 2. Youtube video list
 
 ![alt tag](http://vgrem.files.wordpress.com/2012/10/video-links-view.png?w=640&h=319)
 
