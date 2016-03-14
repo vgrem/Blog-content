@@ -31,6 +31,13 @@ SharePoint 2010 project that demonstrates how to programatically deploy Nintex W
 
 The solution allows to embed video hosted on YouTube into SharePoint. The same approach may be applied for embedding video from another video hosting sites, for example from Vimeo.
 
+**Results**
+
+Pic. Add Youtube embed code 
+![alt tag](http://vgrem.files.wordpress.com/2012/11/createembedcode2.png)
+
+Pic. Youtube video list
+
 ![alt tag](http://vgrem.files.wordpress.com/2012/10/video-links-view.png?w=640&h=319)
 
 
